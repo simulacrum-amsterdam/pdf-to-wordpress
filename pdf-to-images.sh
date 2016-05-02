@@ -7,5 +7,7 @@
 rm -rf build
 mkdir build
 
-convert ut.pdf build/ut.png
-gocr -i ut-2.png
+convert -density 150 ut.pdf build/ut.png
+tesseract build/ut-2.png build/ut-2.txt
+
+# gocr -i build/ut-2.png -o build/ut-2.txt
